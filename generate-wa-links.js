@@ -3,7 +3,7 @@
  * Generate WhatsApp broadcast links from a CSV of MABA data.
  *
  * Input CSV columns (header row required):
- *   Nama MABA, Kontak MABA, Nama PIC, Angakatan PIC
+ *   Nama MABA, Kontak MABA, Nama PIC, Angkatan PIC
  *
  * Usage:
  *   node generate-wa-links.js input.csv output.csv
@@ -110,7 +110,7 @@ const col = {
     namaMaba: header.indexOf('Nama MABA'),
     kontakMaba: header.indexOf('Kontak MABA'),
     namaPic: header.indexOf('Nama PIC'),
-    angkatanPic: header.indexOf('Angakatan PIC'),
+    angkatanPic: header.indexOf('Angkatan PIC'),
 };
 
 const missingCols = Object.entries(col)
@@ -123,7 +123,7 @@ if (missingCols.length > 0) {
 }
 
 const outRows = [
-    ['Nama MABA', 'Kontak MABA', 'Nama PIC', 'Angakatan PIC', 'Link WhatsApp', 'Catatan'],
+    ['Nama MABA', 'Kontak MABA', 'Nama PIC', 'Angkatan PIC', 'Link WhatsApp', 'Catatan'],
 ];
 
 let warningCount = 0;
@@ -138,7 +138,7 @@ for (const row of rows.slice(1)) {
     if (!namaMaba) missingFields.push('Nama MABA');
     if (!kontakMaba) missingFields.push('Kontak MABA');
     if (!namaPic) missingFields.push('Nama PIC');
-    if (!angkatanPic) missingFields.push('Angakatan PIC');
+    if (!angkatanPic) missingFields.push('Angkatan PIC');
 
     if (missingFields.length > 0) {
         warningCount++;
