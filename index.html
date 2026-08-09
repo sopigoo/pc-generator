@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generator Broadcast Peserta CEO 2026</title>
+    <title>Generator Broadcast Info Yuk Mentoring UI</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -17,58 +17,18 @@
 
     <!-- Header / Navbar -->
     <header class="bg-emerald-700 text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div>
-                <span class="bg-emerald-600 text-emerald-100 text-xs font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">Tools Task Force</span>
-                <h1 class="text-2xl font-bold mt-1">CEO 2026 Broadcast Generator</h1>
-                <p class="text-emerald-100 text-sm">Automasi personalisasi pesan pengundangan peserta</p>
-            </div>
-            <div class="bg-emerald-800/60 px-4 py-2 rounded-lg border border-emerald-500/30 text-center">
-                <p class="text-xs text-emerald-200">Pelaksanaan Acara:</p>
-                <p class="text-sm font-semibold text-white">Sabtu–Ahad, 15–16 Agustus 2026</p>
-            </div>
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <span class="bg-emerald-600 text-emerald-100 text-xs font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">FUKI Fasilkom UI</span>
+            <h1 class="text-2xl font-bold mt-1">Generator Broadcast Info Yuk Mentoring UI</h1>
+            <p class="text-emerald-100 text-sm">Automasi personalisasi pesan ajakan lanjut mentoring keagamaan Pacil UI</p>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4 mt-8">
-        
-        <!-- Section Link Penting Kegiatan (Copy Only) -->
-        <section class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200 mb-8">
-            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3 flex items-center gap-2">
-                <i class="fa-solid fa-link text-emerald-600"></i> Link Penting Kegiatan (Klik untuk Copy)
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Tombol Copy Link Form Pendaftaran -->
-                <button onclick="copyLink('form')" class="flex items-center w-full text-left justify-between p-3.5 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-xl transition group active:scale-95">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-bold">
-                            <i class="fa-solid fa-copy"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm font-bold text-slate-800 group-hover:text-emerald-700">Formulir Pendaftaran</p>
-                            <p class="text-xs text-slate-500 truncate">bit.ly/Pendaftaran-CEO2026</p>
-                        </div>
-                    </div>
-                </button>
-
-                <!-- Tombol Copy Link Guideline -->
-                <button onclick="copyLink('guideline')" class="flex items-center w-full text-left justify-between p-3.5 bg-sky-50 hover:bg-sky-100 border border-sky-200 rounded-xl transition group active:scale-95">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-sky-600 text-white rounded-lg flex items-center justify-center font-bold">
-                            <i class="fa-solid fa-copy"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm font-bold text-slate-800 group-hover:text-sky-700">Guideline & Booklet Peserta</p>
-                            <p class="text-xs text-slate-500 truncate">bit.ly/Guideline-CEO2026</p>
-                        </div>
-                    </div>
-                </button>
-            </div>
-        </section>
 
         <!-- Main Workspace (Form + Preview) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            
+
             <!-- Form Input (5 Cols) -->
             <div class="lg:col-span-5 bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
                 <h2 class="text-lg font-bold text-slate-800 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
@@ -76,67 +36,30 @@
                 </h2>
 
                 <form id="broadcastForm" class="space-y-4">
-                    
-                    <!-- Pilihan Target -->
+
+                    <!-- Data MABA -->
                     <div>
-                        <label class="block text-xs font-bold uppercase text-slate-600 mb-2">Tingkat Kedekatan (Jenis Chat) *</label>
-                        <select id="jenis_chat" class="w-full px-3.5 py-2.5 bg-emerald-50 border border-emerald-300 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none font-semibold text-emerald-900 transition text-sm">
-                            <option value="1">Jenis 1: Kenal, Sering/Kadang Berinteraksi</option>
-                            <option value="2">Jenis 2: Kenal, Jarang Banget Interaksi</option>
-                            <option value="3">Jenis 3: Belum Kenal, Chat Pertama</option>
-                        </select>
+                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Nama MABA *</label>
+                        <input type="text" id="nama_maba" placeholder="Contoh: Dika"
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
                     </div>
 
                     <hr class="border-slate-100">
 
-                    <!-- Data Peserta -->
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Nama Peserta *</label>
-                        <input type="text" id="nama_peserta" placeholder="Contoh: Dika" 
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm mb-3">
-                        
-                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Fakultas Peserta *</label>
-                        <input type="text" id="fak_peserta" placeholder="Contoh: FT / Vokasi" 
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm mb-3">
-                        
-                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Teman Lain (Confirmed) <span class="text-slate-400 normal-case font-normal">(Opsional)</span></label>
-                        <input type="text" id="nama_temen" placeholder="Contoh: Sarah dan Rio" 
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
-                    </div>
-
-                    <!-- Data Pengajak (Muncul sesuai jenis chat) -->
-                    <div id="data_pengajak_section" class="hidden p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-3">
+                    <!-- Data Pengajak (Pengirim Broadcast) -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-3">
                         <p class="text-xs font-bold uppercase text-slate-600 mb-2">Data Diri Pengajak</p>
-                        
+
                         <div>
                             <label class="block text-[11px] font-bold text-slate-500 mb-1">Nama Pengajak *</label>
-                            <input type="text" id="nama_pengajak" placeholder="Contoh: Ali" 
+                            <input type="text" id="nama_pengajak" placeholder="Contoh: Ali"
                                 class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
                         </div>
-                        
-                        <div class="grid grid-cols-2 gap-2">
-                            <div>
-                                <label class="block text-[11px] font-bold text-slate-500 mb-1">Fakultas Pengajak *</label>
-                                <input type="text" id="fak_pengajak" placeholder="Contoh: FK" 
-                                    class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
-                            </div>
-                            <div>
-                                <label class="block text-[11px] font-bold text-slate-500 mb-1">Angkatan Pengajak *</label>
-                                <input type="text" id="angkatan_pengajak" placeholder="Contoh: 2023" 
-                                    class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
-                            </div>
-                        </div>
 
-                        <!-- Waktu Sapaan Khusus Jenis 3 -->
-                        <div id="waktu_sapaan_section" class="hidden pt-1">
-                            <label class="block text-[11px] font-bold text-slate-500 mb-1">Waktu Sapaan *</label>
-                            <select id="waktu_sapaan" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
-                                <option value="" disabled selected>-- Pilih Waktu --</option>
-                                <option value="pagi">Pagi</option>
-                                <option value="siang">Siang</option>
-                                <option value="sore">Sore</option>
-                                <option value="malam">Malam</option>
-                            </select>
+                        <div>
+                            <label class="block text-[11px] font-bold text-slate-500 mb-1">Angkatan Pengajak *</label>
+                            <input type="text" id="angkatan_pengajak" placeholder="Contoh: 2023"
+                                class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
                         </div>
                     </div>
 
@@ -148,7 +71,7 @@
                         <p class="text-[11px] text-slate-400 mb-2">Format: 08xx... atau 628xx...</p>
                         <div class="relative">
                             <span class="absolute left-3 top-2.5 text-slate-400"><i class="fa-brands fa-whatsapp"></i></span>
-                            <input type="tel" id="nomor_wa" placeholder="Contoh: 08123456789" 
+                            <input type="tel" id="nomor_wa" placeholder="Contoh: 08123456789"
                                 class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm font-semibold">
                         </div>
                     </div>
@@ -171,11 +94,11 @@
 
                 <!-- Action Buttons -->
                 <div class="mt-6 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-3">
-                    <button id="btnCopy" onclick="copyBroadcast()" 
+                    <button id="btnCopy" onclick="copyBroadcast()"
                         class="w-full sm:w-1/2 py-3 px-4 bg-slate-800 hover:bg-slate-900 text-white font-semibold rounded-xl transition flex items-center justify-center gap-2 shadow-sm active:scale-95">
                         <i class="fa-regular fa-copy"></i> Copy Teks Pesan
                     </button>
-                    <button id="btnWA" onclick="sendWhatsApp()" 
+                    <button id="btnWA" onclick="sendWhatsApp()"
                         class="w-full sm:w-1/2 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition flex items-center justify-center gap-2 shadow-sm active:scale-95">
                         <i class="fa-brands fa-whatsapp text-lg"></i> Kirim ke WhatsApp
                     </button>
@@ -195,29 +118,10 @@
     <script>
         // DOM Elements
         const formEl = document.getElementById('broadcastForm');
-        const selectJenis = document.getElementById('jenis_chat');
-        const divPengajak = document.getElementById('data_pengajak_section');
-        const divWaktu = document.getElementById('waktu_sapaan_section');
         const resultDisplay = document.getElementById('resultDisplay');
         const waInput = document.getElementById('nomor_wa');
-        
-        let plainTextResult = ''; // Menyimpan versi plain text murni tanpa HTML (untuk copy/WA)
 
-        // Tampilkan/Sembunyikan form tambahan sesuai Jenis Chat
-        function updateFormVisibility() {
-            const jenis = selectJenis.value;
-            if (jenis === '1') {
-                divPengajak.classList.add('hidden');
-                divWaktu.classList.add('hidden');
-            } else if (jenis === '2') {
-                divPengajak.classList.remove('hidden');
-                divWaktu.classList.add('hidden');
-            } else if (jenis === '3') {
-                divPengajak.classList.remove('hidden');
-                divWaktu.classList.remove('hidden');
-            }
-            generateBroadcast();
-        }
+        let plainTextResult = ''; // Menyimpan versi plain text murni tanpa HTML (untuk copy/WA)
 
         // Fungsi Helper Mengambil Nilai atau Mengubah Jadi "KOSONG"
         function getVal(id, format = 'html') {
@@ -230,127 +134,40 @@
 
         // Main Generator Function
         function generateBroadcast() {
-            const jenis = selectJenis.value;
-            
             // Format HTML (Untuk Tampilan Web)
-            const hNamaP = getVal('nama_peserta', 'html');
-            const hFakP = getVal('fak_peserta', 'html');
-            const hNamaT = document.getElementById('nama_temen').value.trim();
+            const hNamaP = getVal('nama_maba', 'html');
             const hNamaA = getVal('nama_pengajak', 'html');
-            const hFakA = getVal('fak_pengajak', 'html');
             const hAngkA = getVal('angkatan_pengajak', 'html');
-            const hWaktu = getVal('waktu_sapaan', 'html');
 
             // Format Plain Text (Untuk Clipboard & WA)
-            const pNamaP = getVal('nama_peserta', 'plain');
-            const pFakP = getVal('fak_peserta', 'plain');
-            const pNamaT = hNamaT; // opsional, tidak diset KOSONG
+            const pNamaP = getVal('nama_maba', 'plain');
             const pNamaA = getVal('nama_pengajak', 'plain');
-            const pFakA = getVal('fak_pengajak', 'plain');
             const pAngkA = getVal('angkatan_pengajak', 'plain');
-            const pWaktu = getVal('waktu_sapaan', 'plain');
 
-            // Logic Teman Opsional
-            const hTambahTeman = hNamaT ? `, so far udah ada ${hNamaT} yang confirmed ikut` : '';
-            const pTambahTeman = pNamaT ? `, so far udah ada ${pNamaT} yang confirmed ikut` : '';
+            const htmlMsg = `Bismillah, Assalamualaikum!
+Haloo ${hNamaP}! Perkenalkan, aku ${hNamaA} dari Fasilkom ${hAngkA}. Aku dapat kontak kamu dari Adkesma BEM Pacil UI 🙏😊
+Selamat yaaa sudah menjadi bagian dari Pacil UI! 🥳 Semoga perjalanan kuliahnya nanti dimudahkan dan dipenuhi pengalaman yang berharga, aamiin.
+Aku izin menghubungi kamu sebagai perwakilan dari FUKI Fasilkom UI 2026. Dari data yang kamu isi melalui GForm Adkesma BEM Pacil UI, kamu terdata pernah mengikuti mentoring keagamaan sebelumnya. Karena itu, aku mau mengajak kamu untuk melanjutkan mentoring keagamaan Islam di UI! ✨
+Mentoring ini nantinya menjadi wadah untuk belajar dan bertumbuh bersama dalam suasana Islami, dengan 1 kakak mentor dan beberapa teman satu kelompok (baik itu pacil atau fakultas lain). Selain belajar keislaman, insyaAllah mentoring juga bisa menjadi tempat untuk sharing, diskusi, saling support dalam perkuliahan, dan tentunya menambah relasi dengan kakak tingkat maupun teman-teman pacil dan ui lainnya.
+Kalau kamu tertarik untuk melanjutkan mentoring di Pacil UI, kamu bisa langsung mendaftarkan diri melalui:
+🔗 https://www.yukmentoringui.id/
+Nanti pendaftarannya akan diproses terlebih dahulu, dan akan dikabari lagi ketika mentor dan kelompok mentoringmu sudah terbentuk 🙌😊
+Kalau ada yang ingin ditanyakan tentang mentoringnya, boleh banget langsung tanyakan ke aku yaa! Jangan sungkan 🤗✨
+Semoga Allah mudahkan langkah kita untuk terus belajar dan bertumbuh bersama. Yassarallah!`;
 
-            let htmlMsg = '';
-            let plainMsg = '';
-
-            if (jenis === '1') {
-                htmlMsg = `${hNamaP}, sorry gangguu waktunya,
-
-Gw mau konfirmasi kehadiran lu nihh, mungkin lu juga udah tau dari mentor halaqoh/mentoring lu, jadi dari Salam UI mau ngadain acara kumpul & upgrading muslim se-UI yang ikut mentoring, namanya CEO (Capacity Enrichment Odyssey), jadi kayak mentoring gabungan se-UI gitu, sebagai media buat refleksi diri, upgrade skill, refreshing diri (healing), dan silaturahim (memperluas koneksi) sama anak-anak fakultas lain
-
-Acaranya tanggal 15–16 Agustus 2026 nanti (nginep), di sekitar Depok/Puncak. Kuota RSVP-nya terbatas dan undangan ini khusus buat lu, sambil gw coba ajakin anak-anak ${hFakP} lain yang terundang juga buat ikutt${hTambahTeman}
-
-Berikut info kegiatannya:
-Form RSVP: https://bit.ly/Pendaftaran-CEO2026
-Booklet Peserta: https://bit.ly/Guideline-CEO2026
-
-Kira-kira lu sabi ikut ngga yah? 😇`;
-
-                plainMsg = `${pNamaP}, sorry gangguu waktunya,
-
-Gw mau konfirmasi kehadiran lu nihh, mungkin lu juga udah tau dari mentor halaqoh/mentoring lu, jadi dari Salam UI mau ngadain acara kumpul & upgrading muslim se-UI yang ikut mentoring, namanya CEO (Capacity Enrichment Odyssey), jadi kayak mentoring gabungan se-UI gitu, sebagai media buat refleksi diri, upgrade skill, refreshing diri (healing), dan silaturahim (memperluas koneksi) sama anak-anak fakultas lain
-
-Acaranya tanggal 15–16 Agustus 2026 nanti (nginep), di sekitar Depok/Puncak. Kuota RSVP-nya terbatas dan undangan ini khusus buat lu, sambil gw coba ajakin anak-anak ${hFakP} lain yang terundang juga buat ikutt${hTambahTeman}
-
-Berikut info kegiatannya:
-Form RSVP: https://bit.ly/Pendaftaran-CEO2026
-Booklet Peserta: https://bit.ly/Guideline-CEO2026
-
-Kira-kira lu sabi ikut ngga yah? 😇`;
-
-            } else if (jenis === '2') {
-                htmlMsg = `Haii ${hNamaP}, gimana kabarnya? Sorry banget nihh ganggu waktunyaa
-
-Kenalin lagii, gw ${hNamaA} dari ${hFakA} ${hAngkA}
-
-Di sini gw mau konfirmasi kehadiran lu nih, mungkin lu juga udah tau dari mentor halaqoh/mentoring lu, buat ikut acara Salam UI, namanya CEO (Capacity Enrichment Odyssey). Ini sebenernya acara upgrading skill, refreshing diri, dan silaturahim yah, khusus mahasiswa se-UI yang ikut mentoring, jadi pas banget kalau ${hNamaP} ngerasa butuh tempat healing dan koneksi yang lebih luas dengan mahasiswa fakultas-fakultas lain
-
-Buat acaranya tuh tanggal 15–16 Agustus 2026 dan menginap di lingkungan sekitar Depok/Puncak. Kuota RSVP-nya terbatas banget dan undangan ini khusus buat lu, sambil gw coba ajakin anak-anak ${hFakP} lain yang terundang juga buat ikutt${hTambahTeman}
-
-Berikut info kegiatannya:
-Form RSVP: https://bit.ly/Pendaftaran-CEO2026
-Booklet Peserta: https://bit.ly/Guideline-CEO2026
-
-Kira-kira lu available untuk ikut ngga yah? Thank you yahh sebelumnya, ${hNamaP} 😇`;
-
-                plainMsg = `Haii ${pNamaP}, gimana kabarnya? Sorry banget nihh ganggu waktunyaa
-
-Kenalin lagii, gw ${hNamaA} dari ${hFakA} ${hAngkA}
-
-Di sini gw mau mengonfirmasi kehadiran lu nih, mungkin lu juga udah tau dari mentor halaqoh/mentoring lu, buat ikut acara Salam UI, namanya CEO (Capacity Enrichment Odyssey). Ini sebenernya acara upgrading skill, refreshing diri, dan silaturahim yah, khusus mahasiswa se-UI yang ikut mentoring, jadi pas banget kalau ${hNamaP} ngerasa butuh tempat healing dan koneksi yang lebih luas dengan mahasiswa fakultas-fakultas lain
-
-Buat acaranya tuh tanggal 15–16 Agustus 2026 dan menginap di lingkungan sekitar Depok/Puncak. Kuota RSVP-nya terbatas banget dan undangan ini khusus buat lu, sambil gw coba ajakin anak-anak ${hFakP} lain yang terundang juga buat ikutt${hTambahTeman}
-
-Berikut info kegiatannya:
-Form RSVP: https://bit.ly/Pendaftaran-CEO2026
-Booklet Peserta: https://bit.ly/Guideline-CEO2026
-
-Kira-kira lu available untuk ikut ngga yah? Thank you yahh sebelumnya, ${hNamaP} 😇`;
-
-            } else if (jenis === '3') {
-                htmlMsg = `Haii ${hNamaP}, selamat ${hWaktu}, sorry banget nihh ganggu waktunyaa
-
-Kenalinn, gw ${hNamaA} dari ${hFakA} ${hAngkA}, gw dapet kontak ${hNamaP} dari Data Mentoring ${hFakP} tahun ini
-
-Dalam hal ini gw mau mengonfirmasi kehadiran ${hNamaP} nihh, mungkin ${hNamaP} juga udah tau dari mentor halaqoh/mentoring ${hNamaP}, buat ikut kegiatan CEO (Capacity Enrichment Odyssey) dari Salam UI. Kegiatan ini berisi upgrading soft skill, refreshing diri, dan silaturahim khusus mahasiswa se-UI yang ikut mentoring/halaqoh, jadi pas banget kalau ${hNamaP} butuh tempat healing dan koneksi yang lebih luas dengan mahasiswa fakultas-fakultas lain
-
-Buat acaranya tuh tanggal 15–16 Agustus 2026 dan menginap di lingkungan sekitar Depok/Puncak. Kuotanya terbatas banget nihh dan undangan ini khusus buat ${hNamaP}, dan sambil gw coba ajakin anak-anak ${hFakP} lain yang terundang juga buat ikutt${hTambahTeman}
-
-Berikut informasi kegiatannya:
-Form RSVP: https://bit.ly/Pendaftaran-CEO2026
-Booklet Peserta: https://bit.ly/Guideline-CEO2026
-
-Kira-kira ${hNamaP} available untuk ikut ngga yah? Thank you yahh sebelumnya, ${hNamaP} 😇`;
-
-                plainMsg = `Haii ${pNamaP}, selamat ${pWaktu}, sorry banget nihh ganggu waktunyaa
-
-Kenalinn, gw ${hNamaA} dari ${hFakA} ${hAngkA}, gw dapet kontak ${hNamaP} dari Data Mentoring ${hFakP} tahun ini
-
-Dalam hal ini gw mau mengonfirmasi kehadiran ${hNamaP} nihh, mungkin ${hNamaP} juga udah tau dari mentor halaqoh/mentoring ${hNamaP}, buat ikut kegiatan CEO (Capacity Enrichment Odyssey) dari Salam UI. Kegiatan ini berisi upgrading soft skill, refreshing diri, dan silaturahim khusus mahasiswa se-UI yang ikut mentoring/halaqoh, jadi pas banget kalau ${hNamaP} butuh tempat healing dan koneksi yang lebih luas dengan mahasiswa fakultas-fakultas lain
-
-Buat acaranya tuh tanggal 15–16 Agustus 2026 dan menginap di lingkungan sekitar Depok/Puncak. Kuotanya terbatas banget nihh dan undangan ini khusus buat ${hNamaP}, dan sambil gw coba ajakin anak-anak ${hFakP} lain yang terundang juga buat ikutt${hTambahTeman}
-
-Berikut informasi kegiatannya:
-Form RSVP: https://bit.ly/Pendaftaran-CEO2026
-Booklet Peserta: https://bit.ly/Guideline-CEO2026
-
-Kira-kira ${hNamaP} available untuk ikut ngga yah? Thank you yahh sebelumnya, ${hNamaP} 😇`;
-            }
+            const plainMsg = `Bismillah, Assalamualaikum!
+Haloo ${pNamaP}! Perkenalkan, aku ${pNamaA} dari Fasilkom ${pAngkA}. Aku dapat kontak kamu dari Adkesma BEM Pacil UI 🙏😊
+Selamat yaaa sudah menjadi bagian dari Pacil UI! 🥳 Semoga perjalanan kuliahnya nanti dimudahkan dan dipenuhi pengalaman yang berharga, aamiin.
+Aku izin menghubungi kamu sebagai perwakilan dari FUKI Fasilkom UI 2026. Dari data yang kamu isi melalui GForm Adkesma BEM Pacil UI, kamu terdata pernah mengikuti mentoring keagamaan sebelumnya. Karena itu, aku mau mengajak kamu untuk melanjutkan mentoring keagamaan Islam di UI! ✨
+Mentoring ini nantinya menjadi wadah untuk belajar dan bertumbuh bersama dalam suasana Islami, dengan 1 kakak mentor dan beberapa teman satu kelompok (baik itu pacil atau fakultas lain). Selain belajar keislaman, insyaAllah mentoring juga bisa menjadi tempat untuk sharing, diskusi, saling support dalam perkuliahan, dan tentunya menambah relasi dengan kakak tingkat maupun teman-teman pacil dan ui lainnya.
+Kalau kamu tertarik untuk melanjutkan mentoring di Pacil UI, kamu bisa langsung mendaftarkan diri melalui:
+🔗 https://www.yukmentoringui.id/
+Nanti pendaftarannya akan diproses terlebih dahulu, dan akan dikabari lagi ketika mentor dan kelompok mentoringmu sudah terbentuk 🙌😊
+Kalau ada yang ingin ditanyakan tentang mentoringnya, boleh banget langsung tanyakan ke aku yaa! Jangan sungkan 🤗✨
+Semoga Allah mudahkan langkah kita untuk terus belajar dan bertumbuh bersama. Yassarallah!`;
 
             resultDisplay.innerHTML = htmlMsg;
             plainTextResult = plainMsg;
-        }
-
-        // Fungsionalitas Link Copy
-        function copyLink(type) {
-            let textToCopy = type === 'form' ? 'https://bit.ly/Pendaftaran-CEO2026' : 'https://bit.ly/Guideline-CEO2026';
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                showToast(type === 'form' ? 'Link Formulir disalin!' : 'Link Guideline disalin!');
-            });
         }
 
         // Fungsionalitas Copy Broadcast Teks
@@ -367,13 +184,13 @@ Kira-kira ${hNamaP} available untuk ikut ngga yah? Thank you yahh sebelumnya, ${
         // Fungsionalitas WhatsApp
         function sendWhatsApp() {
             let phone = waInput.value.trim();
-            
+
             if(!phone) {
                 showToast('Isi nomor WhatsApp target terlebih dahulu!');
                 waInput.focus();
                 return;
             }
-            
+
             if(plainTextResult.includes('KOSONG')) {
                 showToast('Lengkapi data form terlebih dahulu sebelum kirim WA!');
                 return;
@@ -402,11 +219,9 @@ Kira-kira ${hNamaP} available untuk ikut ngga yah? Thank you yahh sebelumnya, ${
 
         // Event Listener ke semua input form
         formEl.addEventListener('input', generateBroadcast);
-        selectJenis.addEventListener('change', updateFormVisibility);
 
         // Initial Run
-        updateFormVisibility();
+        generateBroadcast();
     </script>
 </body>
 </html>
-
