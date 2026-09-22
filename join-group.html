@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generator Broadcast Info Yuk Mentoring UI</title>
+    <title>Generator Broadcast Reminder Join Group Mentoring</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -21,11 +21,11 @@
             <div class="flex flex-wrap justify-between items-start gap-3">
                 <div>
                     <span class="bg-emerald-600 text-emerald-100 text-xs font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">FUKI Fasilkom UI</span>
-                    <h1 class="text-2xl font-bold mt-1">Generator Broadcast Info Yuk Mentoring UI</h1>
-                    <p class="text-emerald-100 text-sm">Automasi personalisasi pesan ajakan lanjut mentoring keagamaan Pacil UI</p>
+                    <h1 class="text-2xl font-bold mt-1">Generator Broadcast Reminder Join Group</h1>
+                    <p class="text-emerald-100 text-sm">Automasi pesan ajakan join group mentoring &amp; group SIWAK</p>
                 </div>
-                <a href="join-group.html" class="text-emerald-100 hover:text-white text-sm font-semibold flex items-center gap-1.5 bg-emerald-800/40 px-3 py-2 rounded-lg transition">
-                    Generator Reminder Join Group <i class="fa-solid fa-arrow-right"></i>
+                <a href="index.html" class="text-emerald-100 hover:text-white text-sm font-semibold flex items-center gap-1.5 bg-emerald-800/40 px-3 py-2 rounded-lg transition">
+                    <i class="fa-solid fa-arrow-left"></i> Generator Info Yuk Mentoring
                 </a>
             </div>
         </div>
@@ -39,34 +39,57 @@
             <!-- Form Input (5 Cols) -->
             <div class="lg:col-span-5 bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
                 <h2 class="text-lg font-bold text-slate-800 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
-                    <i class="fa-solid fa-sliders text-emerald-600"></i> Atur Pesan & Kontak
+                    <i class="fa-solid fa-sliders text-emerald-600"></i> Atur Pesan &amp; Kontak
                 </h2>
 
                 <form id="broadcastForm" class="space-y-4">
 
-                    <!-- Data MABA -->
+                    <!-- Data Anggota -->
                     <div>
-                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Nama MABA *</label>
-                        <input type="text" id="nama_maba" placeholder="Contoh: Dika"
+                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Nama Anggota *</label>
+                        <input type="text" id="nama_anggota" placeholder="Contoh: Dika"
                             class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
                     </div>
 
                     <hr class="border-slate-100">
 
-                    <!-- Data Pengajak (Pengirim Broadcast) -->
+                    <!-- Data Mentor -->
                     <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-3">
-                        <p class="text-xs font-bold uppercase text-slate-600 mb-2">Data Diri Pengajak</p>
+                        <p class="text-xs font-bold uppercase text-slate-600 mb-2">Data Diri Mentor</p>
 
                         <div>
-                            <label class="block text-[11px] font-bold text-slate-500 mb-1">Nama Pengajak *</label>
-                            <input type="text" id="nama_pengajak" placeholder="Contoh: Ali"
+                            <label class="block text-[11px] font-bold text-slate-500 mb-1">Nama Mentor *</label>
+                            <input type="text" id="nama_mentor" placeholder="Contoh: Ali"
                                 class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
                         </div>
 
                         <div>
-                            <label class="block text-[11px] font-bold text-slate-500 mb-1">Angkatan Pengajak *</label>
-                            <input type="text" id="angkatan_pengajak" placeholder="Contoh: 2023"
+                            <label class="block text-[11px] font-bold text-slate-500 mb-1">Nama / Nomor Kelompok *</label>
+                            <input type="text" id="nama_kelompok" placeholder="Contoh: Kelompok 7"
                                 class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
+                        </div>
+                    </div>
+
+                    <!-- Link Group -->
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-3">
+                        <p class="text-xs font-bold uppercase text-slate-600 mb-2">Link Group</p>
+
+                        <div>
+                            <label class="block text-[11px] font-bold text-slate-500 mb-1">Link Group Mentoring *</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-2 text-slate-400 text-xs"><i class="fa-solid fa-link"></i></span>
+                                <input type="url" id="link_mentoring" placeholder="https://chat.whatsapp.com/..."
+                                    class="w-full pl-8 pr-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[11px] font-bold text-slate-500 mb-1">Link Group SIWAK *</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-2 text-slate-400 text-xs"><i class="fa-solid fa-link"></i></span>
+                                <input type="url" id="link_siwak" placeholder="https://chat.whatsapp.com/..."
+                                    class="w-full pl-8 pr-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none transition text-sm">
+                            </div>
                         </div>
                     </div>
 
@@ -96,7 +119,7 @@
                     </div>
 
                     <!-- Result Box (Menggunakan DIV agar bisa memuat span KOSONG merah) -->
-                    <div id="resultDisplay" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 text-sm leading-relaxed min-h-[300px] whitespace-pre-wrap font-sans overflow-y-auto"></div>
+                    <div id="resultDisplay" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 text-sm leading-relaxed min-h-[300px] whitespace-pre-wrap font-sans overflow-y-auto break-words"></div>
                 </div>
 
                 <!-- Action Buttons -->
@@ -136,42 +159,62 @@
             if (val === '') {
                 return format === 'html' ? '<span class="text-red-600 font-bold">KOSONG</span>' : 'KOSONG';
             }
-            return val;
+            return format === 'html' ? escapeHtml(val) : val;
+        }
+
+        // Escape karakter HTML supaya input user tidak merusak tampilan preview
+        function escapeHtml(str) {
+            return str.replace(/[&<>"']/g, c => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            })[c]);
         }
 
         // Main Generator Function
         function generateBroadcast() {
             // Format HTML (Untuk Tampilan Web)
-            const hNamaP = getVal('nama_maba', 'html');
-            const hNamaA = getVal('nama_pengajak', 'html');
-            const hAngkA = getVal('angkatan_pengajak', 'html');
+            const hNama = getVal('nama_anggota', 'html');
+            const hMentor = getVal('nama_mentor', 'html');
+            const hKelompok = getVal('nama_kelompok', 'html');
+            const hLinkMentoring = getVal('link_mentoring', 'html');
+            const hLinkSiwak = getVal('link_siwak', 'html');
 
             // Format Plain Text (Untuk Clipboard & WA)
-            const pNamaP = getVal('nama_maba', 'plain');
-            const pNamaA = getVal('nama_pengajak', 'plain');
-            const pAngkA = getVal('angkatan_pengajak', 'plain');
+            const pNama = getVal('nama_anggota', 'plain');
+            const pMentor = getVal('nama_mentor', 'plain');
+            const pKelompok = getVal('nama_kelompok', 'plain');
+            const pLinkMentoring = getVal('link_mentoring', 'plain');
+            const pLinkSiwak = getVal('link_siwak', 'plain');
 
-            const htmlMsg = `Bismillah, Assalamualaikum!
-Haloo ${hNamaP}! Perkenalkan, aku ${hNamaA} dari Fasilkom ${hAngkA}. Aku dapat kontak kamu dari Adkesma BEM Pacil UI 🙏😊
-Selamat yaaa sudah menjadi bagian dari Pacil UI! 🥳 Semoga perjalanan kuliahnya nanti dimudahkan dan dipenuhi pengalaman yang berharga, aamiin.
-Aku izin menghubungi kamu sebagai perwakilan dari FUKI Fasilkom UI 2026. Dari data yang kamu isi melalui GForm Adkesma BEM Pacil UI, kamu terdata pernah mengikuti mentoring keagamaan sebelumnya. Karena itu, aku mau mengajak kamu untuk melanjutkan mentoring keagamaan Islam di UI! ✨
-Mentoring ini nantinya menjadi wadah untuk belajar dan bertumbuh bersama dalam suasana Islami, dengan 1 kakak mentor dan beberapa teman satu kelompok (baik itu pacil atau fakultas lain). Selain belajar keislaman, insyaAllah mentoring juga bisa menjadi tempat untuk sharing, diskusi, saling support dalam perkuliahan, dan tentunya menambah relasi dengan kakak tingkat maupun teman-teman pacil dan ui lainnya.
-Kalau kamu tertarik untuk melanjutkan mentoring di Pacil UI, kamu bisa langsung mendaftarkan diri melalui:
-🔗 https://www.yukmentoringui.id/
-Nanti pendaftarannya akan diproses terlebih dahulu, dan akan dikabari lagi ketika mentor dan kelompok mentoringmu sudah terbentuk 🙌😊
-Kalau ada yang ingin ditanyakan tentang mentoringnya, boleh banget langsung tanyakan ke aku yaa! Jangan sungkan 🤗✨
-Semoga Allah mudahkan langkah kita untuk terus belajar dan bertumbuh bersama. Yassarallah!`;
+            // Bold di HTML pakai <strong>, di WhatsApp pakai *teks*
+            const htmlMsg = `Assalamu'alaikum, ${hNama}! 👋
 
-            const plainMsg = `Bismillah, Assalamualaikum!
-Haloo ${pNamaP}! Perkenalkan, aku ${pNamaA} dari Fasilkom ${pAngkA}. Aku dapat kontak kamu dari Adkesma BEM Pacil UI 🙏😊
-Selamat yaaa sudah menjadi bagian dari Pacil UI! 🥳 Semoga perjalanan kuliahnya nanti dimudahkan dan dipenuhi pengalaman yang berharga, aamiin.
-Aku izin menghubungi kamu sebagai perwakilan dari FUKI Fasilkom UI 2026. Dari data yang kamu isi melalui GForm Adkesma BEM Pacil UI, kamu terdata pernah mengikuti mentoring keagamaan sebelumnya. Karena itu, aku mau mengajak kamu untuk melanjutkan mentoring keagamaan Islam di UI! ✨
-Mentoring ini nantinya menjadi wadah untuk belajar dan bertumbuh bersama dalam suasana Islami, dengan 1 kakak mentor dan beberapa teman satu kelompok (baik itu pacil atau fakultas lain). Selain belajar keislaman, insyaAllah mentoring juga bisa menjadi tempat untuk sharing, diskusi, saling support dalam perkuliahan, dan tentunya menambah relasi dengan kakak tingkat maupun teman-teman pacil dan ui lainnya.
-Kalau kamu tertarik untuk melanjutkan mentoring di Pacil UI, kamu bisa langsung mendaftarkan diri melalui:
-🔗 https://www.yukmentoringui.id/
-Nanti pendaftarannya akan diproses terlebih dahulu, dan akan dikabari lagi ketika mentor dan kelompok mentoringmu sudah terbentuk 🙌😊
-Kalau ada yang ingin ditanyakan tentang mentoringnya, boleh banget langsung tanyakan ke aku yaa! Jangan sungkan 🤗✨
-Semoga Allah mudahkan langkah kita untuk terus belajar dan bertumbuh bersama. Yassarallah!`;
+Halo! Aku ${hMentor}, mentor dari kelompok mentoring ${hKelompok} 😊
+
+Aku lihat kamu <strong>belum join group mentoring</strong> nih, mohon segera join yaa karena info, koordinasi, dan berbagai kegiatan mentoring akan disampaikan melalui group tersebut.
+
+Selain group mentoring, jangan lupa juga untuk <strong>join group SIWAK secara umum</strong> supaya kamu tidak ketinggalan informasi dan kegiatan SIWAK lainnya.
+
+📌 <strong>Group Mentoring:</strong> ${hLinkMentoring}
+📌 <strong>Group SIWAK:</strong> ${hLinkSiwak}
+
+Mohon segera join kedua group di atas yaa. Kalau ada kendala saat join, boleh langsung chat aku 🙌
+
+Jazakumullahu khairan! ✨`;
+
+            const plainMsg = `Assalamu'alaikum, ${pNama}! 👋
+
+Halo! Aku ${pMentor}, mentor dari kelompok mentoring ${pKelompok} 😊
+
+Aku lihat kamu *belum join group mentoring* nih, mohon segera join yaa karena info, koordinasi, dan berbagai kegiatan mentoring akan disampaikan melalui group tersebut.
+
+Selain group mentoring, jangan lupa juga untuk *join group SIWAK secara umum* supaya kamu tidak ketinggalan informasi dan kegiatan SIWAK lainnya.
+
+📌 *Group Mentoring:* ${pLinkMentoring}
+📌 *Group SIWAK:* ${pLinkSiwak}
+
+Mohon segera join kedua group di atas yaa. Kalau ada kendala saat join, boleh langsung chat aku 🙌
+
+Jazakumullahu khairan! ✨`;
 
             resultDisplay.innerHTML = htmlMsg;
             plainTextResult = plainMsg;
