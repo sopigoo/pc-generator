@@ -1,0 +1,10 @@
+# Data kontak asli — jangan pernah di-commit / di-publish
+*.csv
+!template-input.csv
+
+# Editor
+.vscode/
+
+# Vercel
+.vercel/
+node_modules/
