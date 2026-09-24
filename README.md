@@ -1,6 +1,6 @@
 # Generate WhatsApp Links
 
-Script Node.js untuk generate link WhatsApp (dengan pesan broadcast Yuk Mentoring UI yang sudah terisi otomatis) dari data spreadsheet, tanpa perlu isi form satu-satu di [index.html](index.html).
+Script Node.js untuk generate link WhatsApp (dengan pesan broadcast Yuk Mentoring UI yang sudah terisi otomatis) dari data spreadsheet, tanpa perlu isi form satu-satu di [archive/yuk-mentoring.html](archive/yuk-mentoring.html).
 
 ## Kebutuhan
 
@@ -40,4 +40,11 @@ Script Node.js untuk generate link WhatsApp (dengan pesan broadcast Yuk Mentorin
 
 - Nomor yang diawali `0` otomatis diubah ke awalan `62`.
 - Baris dengan data kosong (Nama MABA/Kontak MABA/Nama PIC/Angakatan PIC) akan dilewati dan ditandai di kolom Catatan, bukan menghasilkan link yang salah.
-- Isi pesan broadcast mengikuti template yang sama dengan [index.html](index.html). Kalau teks broadcast di halaman itu diubah, sesuaikan juga fungsi `buildMessage` di [generate-wa-links.js](generate-wa-links.js) supaya tetap sinkron.
+- Isi pesan broadcast mengikuti template yang sama dengan [archive/yuk-mentoring.html](archive/yuk-mentoring.html). Kalau teks broadcast di halaman itu diubah, sesuaikan juga fungsi `buildMessage` di [generate-wa-links.js](generate-wa-links.js) supaya tetap sinkron.
+
+## Struktur Halaman
+
+- **[public/index.html](public/index.html)** — satu-satunya halaman yang dipublish ke Vercel (Generator Reminder Join Group), tampil di `/`.
+- **[archive/yuk-mentoring.html](archive/yuk-mentoring.html)** — Generator Info Yuk Mentoring, sementara disembunyikan. Masih bisa dibuka lokal, tapi tidak ikut ter-deploy karena [vercel.json](vercel.json) membatasi publikasi hanya ke folder `public/`.
+
+Untuk menampilkannya kembali, pindahkan filenya ke `public/`.

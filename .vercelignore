@@ -1,7 +1,8 @@
-# Jangan upload data kontak asli ke hosting publik
+# Hanya folder public/ yang dipublish (lihat vercel.json).
+# Baris di bawah ini lapisan pengaman kedua supaya data kontak
+# tidak pernah ter-upload ke hosting publik.
 *.csv
 !template-input.csv
 
 .vscode/
-README.md
-generate-wa-links.js
+archive/
